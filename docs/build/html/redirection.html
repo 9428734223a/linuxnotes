@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>–I/O Redirection– &#8212; linuxnotes 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to linuxnotes’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="i-o-redirection">
+<h1>&#8211;I/O Redirection&#8211;<a class="headerlink" href="#i-o-redirection" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="standard-output">
+<h2>Standard Output<a class="headerlink" href="#standard-output" title="Permalink to this headline">¶</a></h2>
+<p>Most command line programs that relay information back to the display(?) do so by something called standard output. The standard output of a program can be redirected to something else like a file, using the &#8216;&gt;&#8217; symbol. Ex. ls &gt; file_list.txt - This directs the output of the ls command into a file called &#8216;file_list.txt&#8217;</p>
+<p>The &#8216;&gt;&#8217; symbol will overwrite the contents of a file if used on the same file. However, using the &#8216;&gt;&gt;&#8217; symbol will add on to the information already present. Ex. ls &gt;&gt; file_list.txt
+Note: If the file does not exist when attempting to use standard output redirection, the file will be created.</p>
+</div>
+<div class="section" id="standard-input">
+<h2>Standard Input<a class="headerlink" href="#standard-input" title="Permalink to this headline">¶</a></h2>
+<p>Many programs also have the capability to accept input, this is known as standard input. This is done by using the &#8216;&lt;&#8217; symbol. Ex. sort &lt; file_list.txt - In this example, &#8216;file_list.txt&#8217; is being sent to the sort program.
+The output of this command will be outputed to the screen, however, the output can be redirected if desired. Ex. sort &lt; file_list.txt &gt; sorted_file_list.txt
+Note: The order of redirection does not matter. The only requirment is that the redirectioin operators must appear after the other options/arguments in the command.</p>
+</div>
+<div class="section" id="pipes">
+<h2>Pipes<a class="headerlink" href="#pipes" title="Permalink to this headline">¶</a></h2>
+<p>A &#8216;pipe&#8217; is a form of I/O redirection that connects multiple programs together. This is a very powerful tool because the standard output of a program can be immediatly redirected into another program to streamline a task. Ex. ls -l | less - The output of the ls command is sent into the less command.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">&#8211;I/O Redirection&#8211;</a><ul>
+<li><a class="reference internal" href="#standard-output">Standard Output</a></li>
+<li><a class="reference internal" href="#standard-input">Standard Input</a></li>
+<li><a class="reference internal" href="#pipes">Pipes</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to linuxnotes&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/redirection.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Casey Davis.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/redirection.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
