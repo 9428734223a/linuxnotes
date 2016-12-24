@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>–Create and Edit Text Files– &#8212; linuxnotes 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="–I/O Redirection–" href="redirection.html" />
+    <link rel="prev" title="Welcome to linuxnotes’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="create-and-edit-text-files">
+<h1>&#8211;Create and Edit Text Files&#8211;<a class="headerlink" href="#create-and-edit-text-files" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creating-a-file">
+<h2>Creating a File<a class="headerlink" href="#creating-a-file" title="Permalink to this headline">¶</a></h2>
+<p>The &#8216;touch&#8217; command will create file if non-existent:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="n">text_file</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>The &#8216;echo&#8217; command relays a string back to the terminal:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;Hello&quot;</span>
+</pre></div>
+</div>
+<p>Using redirection with echo, a string can be sent to a file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;Hello&quot;</span> <span class="o">&gt;</span> <span class="n">text_file</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Echo can also append text to file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;New Info&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">text_file</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>This will also create a file if non-existent.</p>
+<p>cat command - &#8216;concatenate&#8217; - send to terminal by default(?):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">text_file</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="editors">
+<h2>Editors<a class="headerlink" href="#editors" title="Permalink to this headline">¶</a></h2>
+<p>There are two default command line editors: vim/vi and nano. Nano is self-explanatory.</p>
+</div>
+<div class="section" id="vi-vim">
+<h2>vi/vim<a class="headerlink" href="#vi-vim" title="Permalink to this headline">¶</a></h2>
+<p>Vi and vim are command line text editors. They are essentially the same, however, vim has some plugin capabilities(?) that vi doesn&#8217;t. Vim is a contraction of &#8220;vi improved.&#8221;</p>
+<p>Vi operates in three different modes: command mode, insert mode, and last line mode.</p>
+</div>
+<div class="section" id="insert-mode">
+<h2>Insert Mode<a class="headerlink" href="#insert-mode" title="Permalink to this headline">¶</a></h2>
+<p>By default, vi is in command mode. To invoke insert mode, press &#8216;i.&#8217;The &#8220;&#8211; INSERT &#8211;&#8221; sign should appear in the bottom left corner if done correctly. Insert mode allows you to write in the file and navigate that file with the arrow keys. Hit the esc key to exit insert mode. This will send you back to command mode.</p>
+</div>
+<div class="section" id="command-mode">
+<h2>Command Mode<a class="headerlink" href="#command-mode" title="Permalink to this headline">¶</a></h2>
+<p>Command mode is a case sensitive combinations of one or more letters, can be prefix with a number to repeat the command a certain number of times.</p>
+<p>Common commands:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>a - append after cursor
+A - append at the end of a line
+d - delete single character
+dd -delete full line
+o - insert line
+
+yw - copy word
+yy - copy entire line
+2yy - copy two lines
+p - paste after cursor
+P - paste before cursor
+
+U - undo command
+u - step back through all changes
+/ - find a string
+
+:w - write (save) the file, but don&#39;t exit
+:wq - write and quit
+:q - quit, fails if changes have been made
+:q! - quit without writing
+</pre></div>
+</div>
+</div>
+<div class="section" id="last-line-mode">
+<h2>Last Line Mode<a class="headerlink" href="#last-line-mode" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="stream-editor">
+<h2>Stream Editor<a class="headerlink" href="#stream-editor" title="Permalink to this headline">¶</a></h2>
+<p>Using sed</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">&#8211;Create and Edit Text Files&#8211;</a><ul>
+<li><a class="reference internal" href="#creating-a-file">Creating a File</a></li>
+<li><a class="reference internal" href="#editors">Editors</a></li>
+<li><a class="reference internal" href="#vi-vim">vi/vim</a></li>
+<li><a class="reference internal" href="#insert-mode">Insert Mode</a></li>
+<li><a class="reference internal" href="#command-mode">Command Mode</a></li>
+<li><a class="reference internal" href="#last-line-mode">Last Line Mode</a></li>
+<li><a class="reference internal" href="#stream-editor">Stream Editor</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to linuxnotes&#8217;s documentation!</a></li>
+      <li>Next: <a href="redirection.html" title="next chapter">&#8211;I/O Redirection&#8211;</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/textfile.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Casey Davis.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/textfile.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

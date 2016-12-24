@@ -10,6 +10,7 @@ Welcome to linuxnotes's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   textfile
    redirection
 
 Indices and tables
