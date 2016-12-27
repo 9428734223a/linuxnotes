@@ -12,6 +12,8 @@ Welcome to linuxnotes's documentation!
 
    textfile
    redirection
+   comparetextfiles
+   searchfile
 
 Indices and tables
 ==================

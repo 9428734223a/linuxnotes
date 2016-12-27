@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>–Search for Files– &#8212; linuxnotes 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="–Compare Text Files and Binary Files–" href="comparetextfiles.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="search-for-files">
+<h1>&#8211;Search for Files&#8211;<a class="headerlink" href="#search-for-files" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="search-by-name">
+<h2>Search by Name<a class="headerlink" href="#search-by-name" title="Permalink to this headline">¶</a></h2>
+<p>Use the &#8216;find&#8217; command to search for a file by name:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;text_file.txt&quot;</span>
+</pre></div>
+</div>
+<p>The &#8216;-name&#8217; argument searches for the name of a file specified in the field that follows it, which is &#8220;text_file.txt&#8221; in this example. By default, this will only search for &#8220;text_file.txt&#8221; in the working directory(?). To specify a particular directory to search in, the path must be passed in before the -name argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">/</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;text_file.txt&quot;</span>
+</pre></div>
+</div>
+<p>This searches for text_file.txt from the root directory and will return the path where the file is located.</p>
+<p>For a quick synopsis of the file system, use the &#8216;df -h&#8217; command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+<p>This will display the various partitions and where they are mounted on the hard drive.
+On large file systems this can be useful for finding a more specific path as to where a file might be located in order to cut search time.</p>
+<p>In order to ignore case sensitivity, pass in the &#8216;-iname&#8217; argument instead of &#8216;-name&#8217;:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">/</span> <span class="o">-</span><span class="n">iname</span> <span class="s2">&quot;text_file.txt&quot;</span>
+</pre></div>
+</div>
+<p>This will return all results of &#8220;text_file&#8221; regardless of case.</p>
+<p>(NEEDS TO BE FINISHED)</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">&#8211;Search for Files&#8211;</a><ul>
+<li><a class="reference internal" href="#search-by-name">Search by Name</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="comparetextfiles.html" title="previous chapter">&#8211;Compare Text Files and Binary Files&#8211;</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/searchfile.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Casey Davis.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/searchfile.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

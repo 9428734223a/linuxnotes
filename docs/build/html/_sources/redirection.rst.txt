@@ -34,5 +34,3 @@ A 'pipe' is a form of I/O redirection that connects multiple programs together. 
     ls -l | less 
 
 The output of the ls command is sent into the less command.
-
-
